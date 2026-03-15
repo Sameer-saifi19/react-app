@@ -1,12 +1,19 @@
-import React from "react";
+import { cn } from "../../lib/utils";
 
-type Props = {
-  children: React.ReactNode;
-  className?: string
-};
+type Props = React.HTMLAttributes<HTMLDivElement>;
 
-function Container({ children, className }: Props) {
-  return <div className={`container mx-auto px-6 sm:px-10 md:px-12 lg:px-36 ${className}`} >{children}</div>;
+function Container({ children, className, ...props }: Props) {
+  return (
+    <div
+      className={cn(
+        "container mx-auto px-6 sm:px-10 md:px-12 lg:px-36",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
 }
 
 export default Container;

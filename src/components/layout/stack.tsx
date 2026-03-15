@@ -1,10 +1,13 @@
-type Props = {
-  children: React.ReactNode;
-  className?: string;
-};
+import { cn } from "../../lib/utils";
 
-function Stack({ children, className }: Props) {
-  return <div className={`flex flex-col gap-6 ${className}`}>{children}</div>;
+type Props = React.HTMLAttributes<HTMLDivElement>;
+
+function Stack({ children, className, ...props }: Props) {
+  return (
+    <div className={cn("flex flex-col gap-6", className)} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default Stack;

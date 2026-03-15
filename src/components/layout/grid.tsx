@@ -1,10 +1,16 @@
-type Props = {
-  children: React.ReactNode;
-  className?: string
-};
+import { cn } from "../../lib/utils";
 
-function Grid({ children, className }: Props) {
-  return <div className={`grid gap-6 md lg:grid-cols-12 ${className}`} >{children}</div>;
+type Props = React.HTMLAttributes<HTMLDivElement>;
+
+function Grid({ children, className, ...props }: Props) {
+  return (
+    <div
+      className={cn("grid gap-6 md:grid-cols-12", className)}
+      {...props}
+    >
+      {children}
+    </div>
+  );
 }
 
-export default Grid
+export default Grid;

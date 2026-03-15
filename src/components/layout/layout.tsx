@@ -1,5 +1,4 @@
 import Container from "./container";
-import Section from "./section";
 
 type Props = {
   children: React.ReactNode;

@@ -1,12 +1,15 @@
-type Props = {
-  children: React.ReactNode;
-  className?: string;
-};
+import { cn } from "../../lib/utils";
 
-function Center({ children, className }: Props) {
+type Props = React.HTMLAttributes<HTMLDivElement>;
+
+function Center({ children, className, ...props }: Props) {
   return (
     <div
-      className={`flex items-center justify-center min-h-screen ${className}`}
+      className={cn(
+        "flex items-center justify-center min-h-screen",
+        className
+      )}
+      {...props}
     >
       {children}
     </div>

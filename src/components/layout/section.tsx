@@ -1,10 +1,16 @@
-type Props = {
-  children: React.ReactNode;
-  className?: string
-};
+import { cn } from "../../lib/utils";
 
-function Section({ children, className }: Props) {
-  return <div className={`py-12 sm:py-16 md:py-20 lg:py-24 ${className}`} >{children}</div>;
+type Props = React.HTMLAttributes<HTMLDivElement>;
+
+function Section({ className, children, ...props }: Props) {
+  return (
+    <div
+      className={cn("py-12 sm:py-16 md:py-20 lg:py-24", className)}
+      {...props}
+    >
+      {children}
+    </div>
+  );
 }
 
 export default Section;
