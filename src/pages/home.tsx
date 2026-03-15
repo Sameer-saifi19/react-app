@@ -6,7 +6,6 @@ function Home() {
     <Section>
       <Container>
         <h1 className="main-heading">Home</h1>
-
       </Container>
     </Section>
   );
