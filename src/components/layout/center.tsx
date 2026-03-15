@@ -6,7 +6,7 @@ function Center({ children, className, ...props }: Props) {
   return (
     <div
       className={cn(
-        "flex items-center justify-center min-h-screen",
+        "flex items-center justify-center min-h-screen w-full",
         className
       )}
       {...props}

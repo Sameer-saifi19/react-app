@@ -2,6 +2,7 @@ import Container from "../components/layout/container";
 import Section from "../components/layout/section";
 
 function Home() {
+  
   return (
     <Section>
       <Container>

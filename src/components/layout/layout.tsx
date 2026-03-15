@@ -14,7 +14,7 @@ function Layout() {
               <h1 className="font-bold text-3xl uppercase">logo</h1>
             </div>
 
-            <div className="flex gap-12">
+            <div className="hidden sm:flex gap-12 ">
               <a href="/">Home</a>
               <Link to={"/about"}>About</Link>
               <a href="/">Contact</a>
